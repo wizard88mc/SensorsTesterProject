@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button android:id="@+id/button_test_accelerometer"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/button_choose_accelerometer"
+            android:textAlignment="viewStart"
+            android:onClick="sensorChoosed"/>
+
+    <Button android:id="@+id/button_test_gyroscope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_choose_gyroscope"
+            android:onClick="sensorChoosed"/>
+
+    <Button android:id="@+id/button_test_gps"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/button_choose_gps"
+            android:onClick="sensorChoosed"/>
+
+
+</LinearLayout>

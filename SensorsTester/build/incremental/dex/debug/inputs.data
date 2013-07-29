@@ -1,0 +1,19 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1369432936000 490914 3fe75433da602500cc71fcc1c46e5550291dd45d C:\Users\po\AppData\Local\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\13.0.0\support-v4-13.0.0.jar
+1375111647562 1201 7801d9faa633ae1f76db303e879a00c13212c1fd C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\accelerometer\AccelerometerTester.class
+1375088945393 359 2d9aa5f8e130a07d429179871c91cbef42f50aee C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\BuildConfig.class
+1375113230647 452 82af40edec62af0cba638c2fc855b0ef91344005 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R$style.class
+1375113230620 682 d28a131ba618d09d319f5753e5e33e8aef519c31 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\it\cs\unipd\utils\SeekBarLabel.class
+1375111647599 1591 badea3737a17544efb9d25d575662d1d4fc52218 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\SensorTesterActivity.class
+1375113230649 798 00815cb6297ae7ec26eed3a281f1b7f0cb0640e8 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R.class
+1375113230645 818 0d6fcd59fc3efb647b51622eb81fa4de94119ff0 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R$string.class
+1375110942848 482 c8777507138e74e411feb2c519f7ef12b33f5743 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R$dimen.class
+1375088945386 428 9e85d6395bebf3cdd9ed08dd33659be849b94c68 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R$drawable.class
+1375113230643 518 aeae2221244d609a79b1e57dcfa3972909cc84dd C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R$layout.class
+1375113230644 462 cfe0f82cfdd1d79c76d9b1e6ce6751fb9b222638 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R$menu.class
+1375113230648 427 15b6df84c46c3e643300207bf06e714ff57ba546 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R$xml.class
+1375088945384 361 2c8cf17fc37ea390295845f294a5d75d4df024ed C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R$attr.class
+1375111647465 587 7202184bdf54500cc00510d68b9bd67acf4f6be8 C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\accelerometer\AccelerometerSettings.class
+1375113230642 671 ea815e7f66dc8590e3a5e8013ec4f5870587df0d C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\classes\debug\it\cs\unipd\sensorstester\R$id.class

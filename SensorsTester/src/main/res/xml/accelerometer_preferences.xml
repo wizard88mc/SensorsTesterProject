@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/acc_settings_frequency"
+                        android:key="acc_settings_frequency">
+
+        <it.cs.unipd.it.cs.unipd.utils.SeekBarLabel
+            android:key="acc_frequency_acquisition_seekbar"
+            android:title="@string/acc_frequency" />
+
+                        </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/acc_settings_pattern"
+                        android:key="acc_settings_pattern">
+
+        <CheckBoxPreference android:id="@+id/acc_unlimited_acquisition"
+                            android:defaultValue="true"
+                            android:key="acc_unlimited_acquisition"
+                            android:title="Acquire constantly" />
+
+                        </PreferenceCategory>
+
+</PreferenceScreen>
