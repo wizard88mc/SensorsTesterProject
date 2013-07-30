@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:seekbar="http://schemas.android.com/apk/res/it.cs.unipd.sensorstester">
 
     <PreferenceCategory android:title="@string/acc_settings_frequency"
                         android:key="acc_settings_frequency">
 
-        <it.cs.unipd.it.cs.unipd.utils.SeekBarLabel
+        <it.cs.unipd.utils.SeekBarLabel
             android:key="acc_frequency_acquisition_seekbar"
-            android:title="@string/acc_frequency" />
+            android:title="@string/acc_frequency"
+            android:persistent="true"
+            seekbar:maxValue="4"/>
+
+            <!--seekbar:listValues="NORMAL,UI,FASTEST,GAME"
+            />-->
 
                         </PreferenceCategory>
 

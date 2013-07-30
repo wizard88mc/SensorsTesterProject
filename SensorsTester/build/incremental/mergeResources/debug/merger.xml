@@ -24,15 +24,45 @@
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="accelerometer_tester"
+                path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\layout\accelerometer_tester.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="sensor_tester_activity"
                 path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\layout\sensor_tester_activity.xml"
                 qualifiers=""
                 type="layout" />
             <file
+                name="slider_with_value"
+                path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\layout\slider_with_value.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="accelerometer_tester"
+                path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\menu\accelerometer_tester.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 name="sensor_tester"
                 path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\menu\sensor_tester.xml"
                 qualifiers=""
                 type="menu" />
+            <file
+                path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\values\attrs.xml"
+                qualifiers="" >
+                <declare-styleable name="SeekBarLabelAttributes" >
+                    <attr
+                        name="minValue"
+                        format="integer" />
+                    <attr
+                        name="maxValue"
+                        format="integer" />
+                    <attr
+                        name="listValues"
+                        format="string" />
+                </declare-styleable>
+            </file>
             <file
                 path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\values\dimens.xml"
                 qualifiers="" >
@@ -46,25 +76,23 @@
                 qualifiers="" >
                 <string name="acc_settings_frequency" >Data frequency
                 </string>
-                <string name="action_settings" >Settings
-                </string>
                 <string name="button_choose_accelerometer" >Accelerometer
+                </string>
+                <string name="action_settings" >Settings
                 </string>
                 <string name="acc_frequency" >Frequency: 
                 </string>
                 <string name="app_name" >Sensors Tester
                 </string>
-                <string name="button_choose_gyroscope" >Gyroscope
-                </string>
                 <string name="title_activity_accelerometer_tester" >MainActivity
+                </string>
+                <string name="button_choose_gyroscope" >Gyroscope
                 </string>
                 <string name="acc_settings_pattern" >Acquisition Pattern: 
                 </string>
                 <string name="button_choose_gps" >GPS
                 </string>
                 <string name="hello_world" >Hello world!
-                </string>
-                <string name="acc_pattern" >Acquisition Pattern: 
                 </string>
             </file>
             <file
@@ -121,30 +149,10 @@
                 </style>
             </file>
             <file
-                name="accelerometer_test_settings"
-                path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\layout\accelerometer_test_settings.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="accelerometer_preferences"
                 path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\xml\accelerometer_preferences.xml"
                 qualifiers=""
                 type="xml" />
-            <file
-                name="accelerometer_tester"
-                path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\menu\accelerometer_tester.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="accelerometer_tester"
-                path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\layout\accelerometer_tester.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="slider_with_value"
-                path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\src\main\res\layout\slider_with_value.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="C:\Users\po\AndroidStudioProjects\SensorsTesterProject\SensorsTester\build\res\rs\debug" />
     </dataSet>
