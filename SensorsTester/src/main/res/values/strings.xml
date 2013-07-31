@@ -7,11 +7,17 @@
     <string name="button_choose_accelerometer">Accelerometer</string>
     <string name="button_choose_gyroscope">Gyroscope</string>
     <string name="button_choose_gps">GPS</string>
+    <string name="settings">Settings</string>
 
     <!-- Accelerometer Test section -->
     <string name="acc_settings_frequency">Data frequency</string>
-    <string name="acc_frequency">Frequency: </string>
+    <string name="acc_frequency">Frequency</string>
     <string name="acc_settings_pattern">Acquisition Pattern: </string>
-    <string name="title_activity_accelerometer_tester">MainActivity</string>
+    <string name="title_activity_accelerometer_tester">Accelerometer Test</string>
+    <string name="start_sampling">Start Sampling</string>
+    <string name="stop_sampling">Stop Sampling</string>
+    <string name="acc_sampling_duration">Acquisition duration</string>
+    <string name="acc_idle_duration">Idle state duration</string>
+
 
 </resources>

@@ -26,8 +26,15 @@
         </activity>
         <activity
             android:name="it.cs.unipd.accelerometer.AccelerometerTester"
-            android:label="@string/title_activity_accelerometer_tester" >
+            android:label="@string/title_activity_accelerometer_tester"
+            android:parentActivityName="it.cs.unipd.sensortester.SensorTesterActivity">
         </activity>
+        <activity
+            android:name="it.cs.unipd.accelerometer.AccelerometerSettings"
+            android:label="@string/settings"
+            android:parentActivityName="it.cs.unipd.accelerometer.AccelerometerTester">
+
+            </activity>
     </application>
 
 </manifest>

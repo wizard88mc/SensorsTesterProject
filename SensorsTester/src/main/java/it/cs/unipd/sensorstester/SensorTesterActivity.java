@@ -20,8 +20,8 @@ public class SensorTesterActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.sensor_tester, menu);
-        return true;
+        //getMenuInflater().inflate(R.menu.sensor_tester, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     public void sensorChoosed(View view) {

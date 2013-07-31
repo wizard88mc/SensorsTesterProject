@@ -7,25 +7,40 @@
     <PreferenceCategory android:title="@string/acc_settings_frequency"
                         android:key="acc_settings_frequency">
 
-        <it.cs.unipd.utils.SeekBarLabel
-            android:key="acc_frequency_acquisition_seekbar"
-            android:title="@string/acc_frequency"
-            android:persistent="true"
-            seekbar:maxValue="4"/>
-
-            <!--seekbar:listValues="NORMAL,UI,FASTEST,GAME"
-            />-->
+        <ListPreference android:key="acc_frequency"
+                        android:title="@string/acc_frequency"
+                        android:dialogTitle="@string/acc_frequency"
+                        android:entries="@array/accelerometer_list"
+                        android:entryValues="@array/accelerometer_values"/>
 
                         </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/acc_settings_pattern"
                         android:key="acc_settings_pattern">
 
-        <CheckBoxPreference android:id="@+id/acc_unlimited_acquisition"
+        <CheckBoxPreference android:id="@+id/acc_unlimited_sampling"
                             android:defaultValue="true"
-                            android:key="acc_unlimited_acquisition"
-                            android:title="Acquire constantly" />
+                            android:key="acc_unlimited_sampling"
+                            android:title="Acquire constantly"
+                            android:disableDependentsState="true"/>
 
-                        </PreferenceCategory>
+        <it.cs.unipd.utils.SeekBarLabel android:id="@+id/acc_sampling_duration"
+                                        android:key="acc_sampling_duration"
+                                        android:title="@string/acc_sampling_duration"
+                                        android:dependency="acc_unlimited_sampling"
+                                        android:persistent="true"
+                                        seekbar:minValue="10"
+                                        seekbar:maxValue="300"
+                                        seekbar:step="10"/>
+        <it.cs.unipd.utils.SeekBarLabel android:id="@+id/acc_idle_duration"
+                                        android:key="acc_idle_duration"
+                                        android:title="@string/acc_idle_duration"
+                                        android:dependency="acc_unlimited_sampling"
+                                        android:persistent="true"
+                                        seekbar:minValue="10"
+                                        seekbar:maxValue="300"
+                                        seekbar:step="10" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="accelerometer_list">
+        <item>NORMAL</item>
+        <item>UI</item>
+        <item>GAME</item>
+        <item>FASTEST</item>
+    </array>
+    <array name="accelerometer_values">
+        <item>NORMAL</item>
+        <item>UI</item>
+        <item>GAME</item>
+        <item>FASTEST</item>
+    </array>
+</resources>
