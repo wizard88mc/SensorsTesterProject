@@ -27,7 +27,7 @@ public class AccelerometerTester extends Activity implements View.OnClickListene
     private long lastTimestamp = 0;
     private boolean sampling = false;
     private boolean constantSampling;
-    private Thread threadPattern = null;
+    private AlternateManager threadPattern = null;
 
     public AccelerometerTester() {
         super();
@@ -121,7 +121,7 @@ public class AccelerometerTester extends Activity implements View.OnClickListene
                 sensorManager.unregisterListener(this);
             }
             else {
-
+                threadPattern.endPattern();
             }
             sampling = false;
         }

@@ -4,23 +4,61 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:textSize="15dp"
+              android:drawableBottom="@android:color/black"
+              android:text="@string/motion_sensors"
+            android:layout_margin="5dp"/>
+
     <Button android:id="@+id/button_test_accelerometer"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/button_choose_accelerometer"
+            android:text="@string/accelerometer"
             android:textAlignment="viewStart"
             android:onClick="sensorChoosed"/>
 
-    <Button android:id="@+id/button_test_gyroscope"
+    <Button android:id="@+id/button_test_gravity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_choose_gyroscope"
-            android:onClick="sensorChoosed"/>
+            android:text="@string/gravity_sensors"
+            android:textAlignment="viewStart"
+            android:onClick="sensorChoosed" />
+
+    <Button android:id="@+id/button_gyroscope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gyroscope"
+            android:onClick="sensorChoosed" />
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="15dp"
+              android:text="@string/environmental_sensors"
+              android:layout_margin="5dp"/>
+
+    <Button android:id="@+id/button_barometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/barometer"
+            android:onClick="sensorChoosed" />
+
+    <Button android:id="@+id/button_photometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/photometer"
+            android:onClick="sensorChoosed" />
+
+    <Button android:id="@+id/button_thermometer"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/thermometer"
+            android:onClick="sensorChoosed" />
 
     <Button android:id="@+id/button_test_gps"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/button_choose_gps"
+            android:text="@string/gps"
             android:onClick="sensorChoosed"/>
 
 

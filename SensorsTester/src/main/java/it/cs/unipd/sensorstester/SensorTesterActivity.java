@@ -38,7 +38,7 @@ public class SensorTesterActivity extends Activity {
                 System.out.println("GPS");
                 break;
             }
-            case R.id.button_test_gyroscope: {
+            case R.id.button_gyroscope: {
                 System.out.println("Gyroscope");
                 break;
             }

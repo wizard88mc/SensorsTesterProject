@@ -10,4 +10,3 @@ settings.gradle
 SensorsTester/build.gradle
 SensorsTester/SensorsTester.iml
 SensorsTester/build/*
-out/
