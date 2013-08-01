@@ -1,12 +1,12 @@
-.grandle
+.gradle
 .idea
 gradle/
-build.granle
+build.gradle
 gradlew
 gradlew.bat
 local.properties
 SensorsTesterProject.iml
 settings.gradle
 SensorsTester/build.gradle
-SensorTester/SensorsTester.iml
+SensorsTester/SensorsTester.iml
 SensorsTester/build/*
