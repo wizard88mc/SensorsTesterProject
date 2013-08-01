@@ -55,6 +55,16 @@
             android:text="@string/thermometer"
             android:onClick="sensorChoosed" />
 
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/position_sensors" />
+
+    <Button android:id="@+id/button_orientation_sensors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/orientation_sensors"
+            android:onClick="sensorChoosed"/>
+
     <Button android:id="@+id/button_test_gps"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"

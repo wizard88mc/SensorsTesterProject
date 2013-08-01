@@ -4,6 +4,7 @@
     <string name="app_name">Sensors Tester</string>
     <string name="motion_sensors">Motion sensors</string>
     <string name="environmental_sensors">Environmental sensors</string>
+    <string name="position_sensors">Position sensors</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="accelerometer">Accelerometer</string>
@@ -12,6 +13,7 @@
     <string name="barometer">Barometer</string>
     <string name="photometer">Photometer</string>
     <string name="thermometer">Thermometer</string>
+    <string name="orientation_sensors">Orientation sensor</string>
     <string name="gps">GPS</string>
     <string name="settings">Settings</string>
 
