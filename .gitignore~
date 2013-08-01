@@ -9,9 +9,4 @@ SensorsTesterProject.iml
 settings.gradle
 SensorsTester/build.gradle
 SensorsTester/SensorsTester.iml
-<<<<<<< HEAD
 SensorsTester/build/*
-=======
-SensorsTester/build/*
-out/
->>>>>>> 400e3b84c95806b3d4ae4ec985363e471e510e04

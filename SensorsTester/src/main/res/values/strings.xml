@@ -2,11 +2,25 @@
 <resources>
 
     <string name="app_name">Sensors Tester</string>
+    <string name="motion_sensors">Motion sensors</string>
+    <string name="environmental_sensors">Environmental sensors</string>
+    <string name="position_sensors">Position sensors</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="button_choose_accelerometer">Accelerometer</string>
-    <string name="button_choose_gyroscope">Gyroscope</string>
-    <string name="button_choose_gps">GPS</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="gravity">Gravity</string>
+    <string name="linear_acceleration">Linear Acceleration</string>
+    <string name="gyroscope">Gyroscope</string>
+    <string name="orientation">Orientation</string>
+    <string name="ambient_temperature">Ambient temperature</string>
+    <string name="barometer">Barometer</string>
+    <string name="light">Light</string>
+    <string name="pressure">Pressure</string>
+    <string name="proximity">Proximity</string>
+    <string name="relative_humidity">Relative humidity</string>
+    <string name="temperature">Temperature</string>
+    <string name="magnetic_field">Magnetic field</string>
+    <string name="gps">GPS</string>
     <string name="settings">Settings</string>
 
     <!-- Accelerometer Test section -->

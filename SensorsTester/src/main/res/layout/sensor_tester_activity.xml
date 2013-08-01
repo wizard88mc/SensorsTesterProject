@@ -1,27 +1,105 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+<LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+        android:scrollbars="vertical">
 
-    <Button android:id="@+id/button_test_accelerometer"
+    <TextView android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:textSize="15dp"
+              android:drawableBottom="@android:color/black"
+              android:text="@string/motion_sensors"
+            android:layout_margin="5dp"/>
+
+    <Button android:id="@+id/button_accelerometer"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/button_choose_accelerometer"
+            android:text="@string/accelerometer"
             android:textAlignment="viewStart"
-            android:onClick="sensorChoosed"/>
+            android:onClick="motionSensorChosen"/>
 
-    <Button android:id="@+id/button_test_gyroscope"
+    <Button android:id="@+id/button_gravity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_choose_gyroscope"
-            android:onClick="sensorChoosed"/>
+            android:text="@string/gravity"
+            android:textAlignment="viewStart"
+            android:onClick="motionSensorChosen" />
 
-    <Button android:id="@+id/button_test_gps"
+    <Button android:id="@+id/button_gyroscope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gyroscope"
+            android:onClick="motionSensorChosen" />
+
+    <Button android:id="@+id/button_linear_acceleration"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/button_choose_gps"
-            android:onClick="sensorChoosed"/>
+            android:text="@string/linear_acceleration"
+            android:onClick="motionSensorChosen" />
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="15dp"
+              android:text="@string/environmental_sensors"
+              android:layout_margin="5dp"/>
+
+    <Button android:id="@+id/button_ambient_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ambient_temperature"
+            android:onClick="environmentalSensorChosen" />
+
+    <Button android:id="@+id/button_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/light"
+            android:onClick="environmentalSensorChosen" />
+
+    <Button android:id="@+id/button_pressure"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/pressure"
+            android:onClick="environmentalSensorChosen" />
+
+    <Button android:id="@+id/button_proximity"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/proximity"
+            android:onClick="environmentalSensorChosen" />
+
+    <Button android:id="@+id/button_relative_humidity"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/relative_humidity"
+            android:onClick="environmentalSensorChosen" />
+
+    <Button android:id="@+id/button_temperature"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/temperature"
+            android:onClick="environmentalSensorChosen" />
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/position_sensors" />
+
+    <Button android:id="@+id/button_magnetic_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/magnetic_field"
+            android:onClick="positionSensorChosen"/>
+
+    <Button android:id="@+id/button_gps"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/gps"
+            android:onClick="positionSensorChosen"/>
 
 
 </LinearLayout>
+</ScrollView>

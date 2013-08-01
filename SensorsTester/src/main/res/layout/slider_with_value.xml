@@ -12,7 +12,8 @@
               android:layout_width="wrap_content"
               android:layout_gravity="center"
               android:textSize="15dp"
-              android:layout_marginTop="5dp"/>
+              android:layout_marginTop="5dp"
+              android:text=""/>
 
     <SeekBar android:id="@+id/slider_bar"
              android:layout_height="wrap_content"

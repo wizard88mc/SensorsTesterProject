@@ -1,7 +1,5 @@
-package it.cs.unipd.accelerometer;
+package it.cs.unipd.motion_sensors;
 
-import android.app.ActionBar;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.hardware.Sensor;
@@ -18,33 +16,36 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import it.cs.unipd.sensorstester.R;
+import it.cs.unipd.utils.Settings;
 import it.cs.unipd.utils.AlternateManager;
 
-public class AccelerometerTester extends Activity implements View.OnClickListener, SensorEventListener {
+public class BaseMotionSensorManager extends Activity implements View.OnClickListener, SensorEventListener {
 
     private SensorManager sensorManager;
     private Sensor accelerometer;
+    private int sensorID;
     private long lastTimestamp = 0;
     private boolean sampling = false;
     private boolean constantSampling;
     private AlternateManager threadPattern = null;
 
-    public AccelerometerTester() {
+    public BaseMotionSensorManager(int sensorID) {
         super();
+        this.sensorID = sensorID;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.accelerometer_tester);
+        setContentView(R.layout.motion_sensors);
 
-        ((Button)this.findViewById(R.id.button_start_sampling_acc)).setOnClickListener(this);
+        ((Button)this.findViewById(R.id.button_start_sampling)).setOnClickListener(this);
 
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        accelerometer = sensorManager.getDefaultSensor(sensorID);
 
         /*getFragmentManager().beginTransaction()
-                .replace(android.R.id.content, new AccelerometerSettings())
+                .replace(android.R.id.content, new Settings())
                 .commit();*/
     }
 
@@ -60,7 +61,7 @@ public class AccelerometerTester extends Activity implements View.OnClickListene
 
         switch (item.getItemId()) {
             case R.id.action_settings: {
-                Intent intent = new Intent(this, AccelerometerSettings.class);
+                Intent intent = new Intent(this, Settings.class);
                 startActivity(intent);
                 return true;
             }
@@ -95,7 +96,7 @@ public class AccelerometerTester extends Activity implements View.OnClickListene
                 speed = SensorManager.SENSOR_DELAY_FASTEST;
             }
 
-            Button button = (Button)findViewById(R.id.button_start_sampling_acc);
+            Button button = (Button)findViewById(R.id.button_start_sampling);
             button.setText(R.string.stop_sampling);
 
             sampling = true;
@@ -106,8 +107,8 @@ public class AccelerometerTester extends Activity implements View.OnClickListene
             else {
 
                 int samplingDuration = -1, idleDuration = -1;
-                samplingDuration = sharedPreferences.getInt("acc_sampling_durantion", 10);
-                idleDuration = sharedPreferences.getInt("acc_idle_duration", 10);
+                samplingDuration = sharedPreferences.getInt("sampling_durantion", 10);
+                idleDuration = sharedPreferences.getInt("idle_duration", 10);
 
                 threadPattern = new AlternateManager(this, samplingDuration, idleDuration,
                         sensorManager, accelerometer, speed );
@@ -124,6 +125,8 @@ public class AccelerometerTester extends Activity implements View.OnClickListene
                 threadPattern.endPattern();
             }
             sampling = false;
+            Button button = (Button)findViewById(R.id.button_start_sampling);
+            button.setText("Start Sampling");
         }
     }
 
@@ -136,15 +139,15 @@ public class AccelerometerTester extends Activity implements View.OnClickListene
     public void onSensorChanged(SensorEvent sensorEvent) {
 
         float[] values = sensorEvent.values;
-        TextView xAxis = (TextView)findViewById(R.id.acc_x_value);
+        TextView xAxis = (TextView)findViewById(R.id.x_value);
         xAxis.setText(Float.toString(values[0]));
-        TextView yAxis = (TextView)findViewById(R.id.acc_y_value);
+        TextView yAxis = (TextView)findViewById(R.id.y_value);
         yAxis.setText(Float.toString(values[1]));
-        TextView zAxis = (TextView)findViewById(R.id.acc_z_value);
+        TextView zAxis = (TextView)findViewById(R.id.z_value);
         zAxis.setText(Float.toString(values[2]));
 
         if (lastTimestamp != 0) {
-            TextView delta = (TextView)findViewById(R.id.acc_delta_time);
+            TextView delta = (TextView)findViewById(R.id.delta_time);
             delta.setText(Long.toString((sensorEvent.timestamp - lastTimestamp) / 1000000));
         }
         lastTimestamp = sensorEvent.timestamp;

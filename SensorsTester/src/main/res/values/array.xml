@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="accelerometer_list">
+    <array name="speed_list">
         <item>NORMAL</item>
         <item>UI</item>
         <item>GAME</item>
         <item>FASTEST</item>
     </array>
-    <array name="accelerometer_values">
+    <array name="speed_values">
         <item>NORMAL</item>
         <item>UI</item>
         <item>GAME</item>

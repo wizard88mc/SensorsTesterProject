@@ -25,16 +25,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="it.cs.unipd.accelerometer.AccelerometerTester"
-            android:label="@string/title_activity_accelerometer_tester"
-            android:parentActivityName="it.cs.unipd.sensortester.SensorTesterActivity">
+            android:name="it.cs.unipd.motion_sensors.AccelerometerTester"
+            android:label=""
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
         </activity>
         <activity
-            android:name="it.cs.unipd.accelerometer.AccelerometerSettings"
-            android:label="@string/settings"
-            android:parentActivityName="it.cs.unipd.accelerometer.AccelerometerTester">
-
-            </activity>
+            android:name="it.cs.unipd.utils.Settings"
+            android:label="@string/settings">
+        </activity>
     </application>
 
 </manifest>

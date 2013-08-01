@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:seekbar="http://schemas.android.com/apk/res/it.cs.unipd.sensorstester">
+
+    <PreferenceCategory android:title="@string/acc_settings_frequency"
+                        android:key="acc_settings_frequency">
+
+        <ListPreference android:key="acc_frequency"
+                        android:title="@string/acc_frequency"
+                        android:dialogTitle="@string/acc_frequency"
+                        android:entries="@array/speed_list"
+                        android:entryValues="@array/speed_values"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/acc_settings_pattern"
+                        android:key="settings_pattern">
+
+        <CheckBoxPreference android:id="@+id/unlimited_sampling"
+                            android:defaultValue="true"
+                            android:key="unlimited_sampling"
+                            android:title="Acquire constantly"
+                            android:disableDependentsState="true"/>
+
+        <it.cs.unipd.utils.SeekBarLabel android:id="@+id/sampling_duration"
+                                        android:key="sampling_duration"
+                                        android:title="@string/acc_sampling_duration"
+                                        android:dependency="unlimited_sampling"
+                                        android:persistent="true"
+                                        seekbar:minValue="10"
+                                        seekbar:maxValue="300"
+                                        seekbar:step="10"/>
+        <it.cs.unipd.utils.SeekBarLabel android:id="@+id/idle_duration"
+                                        android:key="idle_duration"
+                                        android:title="@string/acc_idle_duration"
+                                        android:dependency="unlimited_sampling"
+                                        android:persistent="true"
+                                        seekbar:minValue="10"
+                                        seekbar:maxValue="300"
+                                        seekbar:step="10" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
