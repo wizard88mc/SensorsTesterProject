@@ -1,6 +1,7 @@
 package it.cs.unipd.utils;
 
 import android.app.Activity;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
@@ -31,5 +32,24 @@ public class Settings extends Activity {
 
             addPreferencesFromResource(R.xml.preferences);
         }
+    }
+
+    public static int FrequencyID(String frequency) {
+
+        int speed = -1;
+        if (frequency.equals("NORMAL")) {
+            speed = SensorManager.SENSOR_DELAY_NORMAL;
+        }
+        else if (frequency.equals("UI")) {
+            speed = SensorManager.SENSOR_DELAY_UI;
+        }
+        else if (frequency.equals("GAME")) {
+            speed = SensorManager.SENSOR_DELAY_GAME;
+        }
+        else if (frequency.equals("FASTEST")) {
+            speed = SensorManager.SENSOR_DELAY_FASTEST;
+        }
+
+        return speed;
     }
 }

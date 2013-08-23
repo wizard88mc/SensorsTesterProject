@@ -3,7 +3,7 @@
 
     <string name="app_name">Sensors Tester</string>
     <string name="motion_sensors">Motion sensors</string>
-    <string name="environmental_sensors">Environmental sensors</string>
+    <string name="environment_sensors">Environmental sensors</string>
     <string name="position_sensors">Position sensors</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>

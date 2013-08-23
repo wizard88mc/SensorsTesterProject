@@ -5,9 +5,9 @@
         xmlns:seekbar="http://schemas.android.com/apk/res/it.cs.unipd.sensorstester">
 
     <PreferenceCategory android:title="@string/acc_settings_frequency"
-                        android:key="acc_settings_frequency">
+                        android:key="settings_frequency">
 
-        <ListPreference android:key="acc_frequency"
+        <ListPreference android:key="frequency"
                         android:title="@string/acc_frequency"
                         android:dialogTitle="@string/acc_frequency"
                         android:entries="@array/speed_list"

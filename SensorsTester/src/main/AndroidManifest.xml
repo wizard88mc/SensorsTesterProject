@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="14"
         android:targetSdkVersion="16" />
 
     <application
@@ -26,9 +26,41 @@
         </activity>
         <activity
             android:name="it.cs.unipd.motion_sensors.AccelerometerTester"
-            android:label=""
+            android:label="@string/accelerometer"
             android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
         </activity>
+        <activity
+            android:name="it.cs.unipd.motion_sensors.GravityTester"
+            android:label="@string/gravity"
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
+        </activity>
+        <activity
+            android:name="it.cs.unipd.motion_sensors.GyroscopeTester"
+            android:label="@string/gyroscope"
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
+        </activity>
+        <activity
+            android:name="it.cs.unipd.motion_sensors.LinearAccelerationTester"
+            android:label="@string/linear_acceleration"
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
+        </activity>
+        <activity
+            android:name="it.cs.unipd.environment_sensors.AmbientTemperatureTester"
+            android:label="@string/ambient_temperature"
+            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity">
+        </activity>
+        <activity
+            android:name="it.cs.unipd.environment_sensors.LightTester"
+            android:label="@string/light"
+            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity"></activity>
+        <activity
+            android:name="it.cs.unipd.environment_sensors.PressureTester"
+            android:label="@string/pressure"
+            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity"></activity>
+        <activity
+            android:name="it.cs.unipd.environment_sensors.RelativeHumidityTester"
+            android:label="@string/relative_humidity"
+            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity"></activity>
         <activity
             android:name="it.cs.unipd.utils.Settings"
             android:label="@string/settings">

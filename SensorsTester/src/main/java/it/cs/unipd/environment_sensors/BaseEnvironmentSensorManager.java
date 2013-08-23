@@ -1,5 +1,7 @@
-package it.cs.unipd.motion_sensors;
+package it.cs.unipd.environment_sensors;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.hardware.Sensor;
@@ -7,7 +9,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.app.Activity;
 import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,10 +17,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import it.cs.unipd.sensorstester.R;
-import it.cs.unipd.utils.Settings;
 import it.cs.unipd.utils.AlternateManager;
+import it.cs.unipd.utils.Settings;
 
-public class BaseMotionSensorManager extends Activity implements View.OnClickListener, SensorEventListener {
+/**
+ * Created by Matteo Ciman on 02/08/13.
+ */
+public class BaseEnvironmentSensorManager extends Activity
+        implements View.OnClickListener, SensorEventListener {
 
     private SensorManager sensorManager;
     private Sensor sensor;
@@ -28,21 +33,29 @@ public class BaseMotionSensorManager extends Activity implements View.OnClickLis
     private boolean sampling = false;
     private boolean constantSampling;
     private AlternateManager threadPattern = null;
+    private String unitMeasure;
 
-    public BaseMotionSensorManager(int sensorID) {
+    public BaseEnvironmentSensorManager(int sensorID, String unitMeasure) {
         super();
-        this.sensorID = sensorID;
+        this.sensorID = sensorID; this.unitMeasure = unitMeasure;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.motion_sensors);
+        setContentView(R.layout.environment_sensors);
 
-        ((Button)this.findViewById(R.id.button_start_sampling)).setOnClickListener(this);
+        ((Button)this.findViewById(R.id.button_start)).setOnClickListener(this);
 
-        sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        sensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(sensorID);
+
+        if (sensor == null) {
+
+            Button buttonStart = (Button)findViewById(R.id.button_start);
+            buttonStart.setEnabled(false);
+
+        }
 
         /*getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, new Settings())
@@ -84,7 +97,7 @@ public class BaseMotionSensorManager extends Activity implements View.OnClickLis
 
             int speed = Settings.FrequencyID(samplingFrequency);
 
-            Button button = (Button)findViewById(R.id.button_start_sampling);
+            Button button = (Button)findViewById(R.id.button_start);
             button.setText(R.string.stop_sampling);
 
             sampling = true;
@@ -102,7 +115,6 @@ public class BaseMotionSensorManager extends Activity implements View.OnClickLis
                         sensorManager, sensor, speed );
 
                 threadPattern.start();
-
             }
         }
         else {
@@ -113,8 +125,8 @@ public class BaseMotionSensorManager extends Activity implements View.OnClickLis
                 threadPattern.endPattern();
             }
             sampling = false;
-            Button button = (Button)findViewById(R.id.button_start_sampling);
-            button.setText("Start Sampling");
+            Button button = (Button)findViewById(R.id.button_start);
+            button.setText(R.string.start_sampling);
         }
     }
 
@@ -126,18 +138,20 @@ public class BaseMotionSensorManager extends Activity implements View.OnClickLis
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
 
-        float[] values = sensorEvent.values;
-        TextView xAxis = (TextView)findViewById(R.id.x_value);
-        xAxis.setText(Float.toString(values[0]));
-        TextView yAxis = (TextView)findViewById(R.id.y_value);
-        yAxis.setText(Float.toString(values[1]));
-        TextView zAxis = (TextView)findViewById(R.id.z_value);
-        zAxis.setText(Float.toString(values[2]));
+        try {
+            float value = sensorEvent.values[0];
+            TextView textValue = (TextView)findViewById(R.id.value);
+            textValue.setText(Float.toString(value) + " " + this.unitMeasure);
 
-        if (lastTimestamp != 0) {
-            TextView delta = (TextView)findViewById(R.id.delta_time);
-            delta.setText(Long.toString((sensorEvent.timestamp - lastTimestamp) / 1000000));
+            if (lastTimestamp != 0) {
+                TextView delta = (TextView)findViewById(R.id.time);
+                delta.setText(Long.toString((sensorEvent.timestamp - lastTimestamp) / 1000000));
+            }
+            lastTimestamp = sensorEvent.timestamp;
         }
-        lastTimestamp = sensorEvent.timestamp;
+        catch(Exception exc) {
+            System.out.println(exc.toString());
+        }
+
     }
 }
