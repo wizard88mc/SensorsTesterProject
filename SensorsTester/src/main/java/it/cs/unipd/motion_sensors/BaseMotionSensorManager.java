@@ -37,16 +37,12 @@ public class BaseMotionSensorManager extends Activity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.motion_sensors);
+        setContentView(R.layout.three_values);
 
         ((Button)this.findViewById(R.id.button_start_sampling)).setOnClickListener(this);
 
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(sensorID);
-
-        /*getFragmentManager().beginTransaction()
-                .replace(android.R.id.content, new Settings())
-                .commit();*/
     }
 
     @Override

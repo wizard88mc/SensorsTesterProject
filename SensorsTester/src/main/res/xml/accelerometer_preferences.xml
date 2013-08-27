@@ -10,8 +10,8 @@
         <ListPreference android:key="acc_frequency"
                         android:title="@string/acc_frequency"
                         android:dialogTitle="@string/acc_frequency"
-                        android:entries="@array/accelerometer_list"
-                        android:entryValues="@array/accelerometer_values"/>
+                        android:entries="@array/speed_list"
+                        android:entryValues="@array/speed_values"/>
 
                         </PreferenceCategory>
 

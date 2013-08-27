@@ -52,15 +52,18 @@
         <activity
             android:name="it.cs.unipd.environment_sensors.LightTester"
             android:label="@string/light"
-            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity"></activity>
+            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity">
+        </activity>
         <activity
             android:name="it.cs.unipd.environment_sensors.PressureTester"
             android:label="@string/pressure"
-            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity"></activity>
+            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity">
+        </activity>
         <activity
             android:name="it.cs.unipd.environment_sensors.RelativeHumidityTester"
             android:label="@string/relative_humidity"
-            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity"></activity>
+            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity">
+        </activity>
         <activity
             android:name="it.cs.unipd.utils.Settings"
             android:label="@string/settings">
