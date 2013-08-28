@@ -21,6 +21,9 @@ import it.cs.unipd.motion_sensors.BaseMotionSensorManager;
 import it.cs.unipd.motion_sensors.GravityTester;
 import it.cs.unipd.motion_sensors.GyroscopeTester;
 import it.cs.unipd.motion_sensors.LinearAccelerationTester;
+import it.cs.unipd.position_sensors.GPSLocationTester;
+import it.cs.unipd.position_sensors.MagneticFieldTester;
+import it.cs.unipd.position_sensors.ProximityTester;
 
 public class SensorTesterActivity extends Activity {
 
@@ -109,14 +112,20 @@ public class SensorTesterActivity extends Activity {
 
             case R.id.button_magnetic_field: {
                 System.out.println("Magnetic field");
+                Intent intent = new Intent(this, MagneticFieldTester.class);
+                startActivity(intent);
                 break;
             }
             case R.id.button_proximity: {
                 System.out.println("Proximity");
+                Intent intent = new  Intent(this, ProximityTester.class);
+                startActivity(intent);
                 break;
             }
             case R.id.button_gps: {
                 System.out.println("GPS");
+                Intent intent = new Intent(this, GPSLocationTester.class);
+                startActivity(intent);
                 break;
             }
         }

@@ -47,22 +47,37 @@
         <activity
             android:name="it.cs.unipd.environment_sensors.AmbientTemperatureTester"
             android:label="@string/ambient_temperature"
-            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity">
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
         </activity>
         <activity
             android:name="it.cs.unipd.environment_sensors.LightTester"
             android:label="@string/light"
-            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity">
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
         </activity>
         <activity
             android:name="it.cs.unipd.environment_sensors.PressureTester"
             android:label="@string/pressure"
-            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity">
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
         </activity>
         <activity
             android:name="it.cs.unipd.environment_sensors.RelativeHumidityTester"
             android:label="@string/relative_humidity"
-            android:parentActivityName="it.cs.unipd.it.sensorstester.SensorTesterActivity">
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
+        </activity>
+        <activity
+            android:name="it.cs.unipd.position_sensors.ProximityTester"
+            android:label="@string/proximity"
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
+        </activity>
+        <activity
+            android:name="it.cs.unipd.position_sensors.MagneticFieldTester"
+            android:label="@string/magnetic_field"
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
+        </activity>
+        <activity
+            android:name="it.cs.unipd.position_sensors.GPSLocationTester"
+            android:label="@string/gps"
+            android:parentActivityName="it.cs.unipd.sensorstester.SensorTesterActivity">
         </activity>
         <activity
             android:name="it.cs.unipd.utils.Settings"
@@ -70,4 +85,5 @@
         </activity>
     </application>
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 </manifest>

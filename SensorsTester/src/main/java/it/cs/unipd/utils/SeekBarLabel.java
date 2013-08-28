@@ -79,6 +79,7 @@ public class SeekBarLabel extends DialogPreference implements SeekBar.OnSeekBarC
         View seekBarView = inflater.inflate(R.layout.slider_with_value, null);
 
         TextView value = (TextView) seekBarView.findViewById(R.id.slider_text_value);
+        String valueS = Integer.toString(progress * step);
         value.setText(Integer.toString(progress * step));
         currentValue = progress * step;
     }
