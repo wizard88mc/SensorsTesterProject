@@ -25,18 +25,12 @@ import it.cs.unipd.sensorstester.R;
  */
 public class SeekBarLabel extends DialogPreference implements SeekBar.OnSeekBarChangeListener {
 
-    private static final String SEEKBAR_NS = "http://schemas.android.com/apk/res/it.cs.unipd.utils";
-    private static final String ANDROID_NS = "http://schemas.android.com/apk/res/android";
-
-    private static final String MIN_VALUE_ATTRIBUTE = "minValue";
-    private static final String MAX_VALUE_ATTRIBUTE = "maxValue";
-    private static final String LIST_VALUES_ATTRIBUTE = "listValues";
-
     private String[] listValues = null;
     private int minValue = 0;
     private int maxValue = -1;
     private int step = 1;
     private int currentValue = 0;
+    private TextView textValue = null;
 
     public SeekBarLabel(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -44,8 +38,6 @@ public class SeekBarLabel extends DialogPreference implements SeekBar.OnSeekBarC
         /**
          * Retrieving attributes values to build the SeekBar
          */
-        //minValue = attrs.getAttributeIntValue(SEEKBAR_NS, MIN_VALUE_ATTRIBUTE, minValue);
-        //maxValue = attrs.getAttributeIntValue(SEEKBAR_NS, MAX_VALUE_ATTRIBUTE, maxValue);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SeekBarLabelAttributes, 0, 0);
 
         step = a.getInt(R.styleable.SeekBarLabelAttributes_step, step);
@@ -64,10 +56,12 @@ public class SeekBarLabel extends DialogPreference implements SeekBar.OnSeekBarC
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View seekBarView = inflater.inflate(R.layout.slider_with_value, null);
 
-        SeekBar seekBar = (SeekBar) seekBarView.findViewById(R.id.slider_bar);
+        SeekBar seekBar = (SeekBar)seekBarView.findViewById(R.id.slider_bar);
         seekBar.setMax(maxValue / step);
         seekBar.setProgress(currentValue);
         seekBar.setOnSeekBarChangeListener(this);
+
+        textValue = (TextView)seekBarView.findViewById(R.id.slider_text_value);
 
         return seekBarView;
     }
@@ -75,12 +69,7 @@ public class SeekBarLabel extends DialogPreference implements SeekBar.OnSeekBarC
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
-        LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View seekBarView = inflater.inflate(R.layout.slider_with_value, null);
-
-        TextView value = (TextView) seekBarView.findViewById(R.id.slider_text_value);
-        String valueS = Integer.toString(progress * step);
-        value.setText(Integer.toString(progress * step));
+        textValue.setText(Integer.toString(progress * step));
         currentValue = progress * step;
     }
 
